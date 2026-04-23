@@ -1,53 +1,53 @@
 {
   "descriptores": {
     "C111": {
-      "A": "Realiza una identificación exhaustiva y holística. Anticipa riesgos o conexiones no obvias entre los requisitos técnicos y las complejidades de la cadena de suministro global.",
-      "B": "Identifica de manera exhaustiva requisitos técnicos y vincula explícitamente varios factores de riesgo del documento (geopolíticos, ambientales, éticos) al contexto específico del caso.",
-      "C": "Identifica correctamente los requisitos técnicos primarios y secundarios. Menciona al menos un concepto del documento (ej: 'material crítico', 'riesgo regulatorio') aplicado al caso.",
-      "D": "Identifica sólo los requisitos técnicos más obvios. Menciona aspectos de suministro de forma superficial y desconectada.",
-      "E": "Omite requisitos técnicos clave y no considera aspectos de suministro o sostenibilidad."
+      "A": "Reconstruye el contexto del brazo robótico de alta velocidad con precisión: función, cargas dinámicas/aceleraciones, exigencias de precisión geométrica, exposición térmica, geometría (barra maciza cuadrada A=b²) y variables de diseño. Traduce el problema a propiedades/variables medibles (E, σ, ρ, k, T_serv/T_max, etc.) con rangos, unidades y supuestos explícitos.",
+      "B": "Identifica con claridad función, cargas y ambiente térmico; reconoce la geometría maciza y mapea la mayoría de requisitos a propiedades relevantes con valores/rangos razonables, con pocos supuestos no declarados.",
+      "C": "Identifica requisitos principales y algunas variables; el mapeo a propiedades es parcial o con cuantificación limitada (faltan unidades/rangos o se omite una dimensión clave como térmica o dinámica).",
+      "D": "Enumera requisitos de forma genérica; omite condiciones de operación (alta velocidad, precisión, ambiente térmico) o no las conecta con variables y propiedades del material.",
+      "E": "Confunde la función o el contexto; omite requisitos críticos y no establece variables relevantes para selección de materiales."
     },
     "C112": {
-      "A": "Sintetiza y prioriza un espectro completo de restricciones, demostrando una comprensión profunda de los trade-offs entre el desempeño técnico y la resiliencia estratégica.",
-      "B": "Define un marco claro de restricciones que equilibra exigencias técnicas inmediatas con riesgos estratégicos a largo plazo (suministro, precio, reputación).",
-      "C": "Identifica restricciones técnicas y al menos una restricción estratégica clara (ej: dependencia de una región inestable, huella de carbono futura regulable).",
-      "D": "Identifica algunas restricciones técnicas, pero no profundiza en las estratégicas a largo plazo.",
-      "E": "Sólo considera restricciones básicas como costo o disponibilidad inmediata."
+      "A": "Formula restricciones duras y coherentes con el modo de falla: rigidez (deflexión/precisión), resistencia (picos dinámicos/plastificación), ventana térmica (T_max de servicio), disipación térmica y manufactura/ensamble. Prioriza restricciones según el ‘qué fallaría primero’ y declara márgenes/seguridad ante incertidumbre.",
+      "B": "Define un conjunto completo de restricciones técnicas con valores o criterios verificables e incorpora al menos una restricción térmica (T_max o estabilidad) y una de manufactura/uso; justifica su relevancia.",
+      "C": "Lista restricciones principales, pero con cuantificación incompleta o sin priorización por modo de falla (p. ej., menciona rigidez/resistencia sin conectarlas a precisión o a picos dinámicos).",
+      "D": "Menciona restricciones básicas sin valores ni criterio de aceptación; no distingue restricciones duras vs. criterios ponderables.",
+      "E": "No identifica restricciones relevantes o plantea restricciones inconsistentes con el problema del brazo robótico."
     },
     "C121": {
-      "A": "Diseña una estrategia integral e innovadora que redefine el problema para convertir las restricciones estratégicas en oportunidades de diseño sostenible y resiliente.",
-      "B": "Formula múltiples estrategias complementarias (ej: rediseño + diversificación) que abordan de manera integrada los desafíos técnicos y estratégicos.",
-      "C": "Formula una estrategia coherente y propone al menos una acción concreta para mitigar un riesgo de suministro, regulatorio o ambiental específico.",
-      "D": "Propone una estrategia simple de sustitución, con una mención genérica a 'reducir riesgos'.",
-      "E": "La estrategia se limita a elegir un material por propiedades, sin considerar riesgos externos."
+      "A": "Propone una estrategia jerárquica completa y ejecutable: (i) deduce M1=E^(1/2)/ρ y M2=σ^(2/3)/ρ desde la geometría maciza; (ii) realiza screening mecánico con CES (rigidez y resistencia específicas); (iii) integra atributos térmicos (k–ρ y T_max) para refinar; (iv) reduce a ≤5 candidatos y prepara la etapa QLDMA/QTDMA con criterios medibles (4–6) sin doble conteo.",
+      "B": "Plantea una estrategia coherente con etapas mecánica→térmica→decisión, usa índices y screening y define criterios para matriz (QLDMA/QTDMA) con razonable independencia; la jerarquía puede ser menos explícita en alguno de los pasos.",
+      "C": "Propone una estrategia general de selección y filtrado (incluye índices o CES), pero con etapas incompletas (p. ej., térmica o matrices) o con criterios poco operables.",
+      "D": "Estrategia genérica (listar materiales o ‘buscar el mejor’) sin proceso jerárquico ni conexión a índices, mapas o matrices.",
+      "E": "No hay estrategia; se limita a preferencias o a copiar resultados del software sin plan ni lógica."
     },
     "C122": {
-      "A": "Presenta una argumentación excepcionalmente crítica y profunda, cuestionando premisas y mostrando las implicaciones de segundo orden de sus decisiones en un contexto global.",
-      "B": "Teje una argumentación persuasiva donde los conceptos técnicos y estratégicos se refuerzan mutuamente, mostrando una visión balanceada.",
-      "C": "Sustenta sus decisiones con principios técnicos sólidos y cita correctamente al menos dos conceptos clave del documento para apoyar su razonamiento estratégico.",
-      "D": "Argumenta con principios técnicos básicos. La conexión con el documento es forzada o inexacta.",
-      "E": "La argumentación es anecdótica, carece de fundamento técnico o estratégico."
+      "A": "Argumenta con base físico–matemática y evidencia: muestra deducción/justificación de M1 y M2, interpreta mapas CES (familias, trade-offs), justifica la integración térmica (k y T_max) y sustenta al menos tres asignaciones no triviales de SM/NP con datos, unidades y condiciones de referencia. Distingue explícitamente razonamiento vs. uso instrumental del software.",
+      "B": "Argumentación técnica sólida apoyada en datos y gráficos; justifica la mayoría de decisiones clave (índices, selección y matrices). Algunas justificaciones pueden ser menos profundas o con menor análisis de sensibilidad.",
+      "C": "Argumenta correctamente a nivel básico, pero con evidencia limitada (pocas cifras/unidades) o conexiones incompletas entre modelo, mapas y ranking.",
+      "D": "Argumentación principalmente descriptiva; usa afirmaciones sin respaldo o con inconsistencias de unidades/propiedades; se apoya en CES como ‘respuesta’ sin razonamiento.",
+      "E": "Argumentación incorrecta o anecdótica; no hay soporte verificable ni conexión entre propiedades y decisión."
     },
     "C131": {
-      "A": "La decisión final es innovadora y está respaldada por un marco de evaluación multicriterio propio que integra de manera ejemplar la sostenibilidad y la gestión de riesgos.",
-      "B": "La decisión es el resultado de un proceso de ponderación sofisticado donde los criterios derivados del documento tienen un peso definido y crucial.",
-      "C": "Aplica métodos de selección de forma correcta y toma una decisión que equilibra de manera clara al menos un criterio técnico con uno estratégico (ej: peso vs. riesgo de suministro).",
-      "D": "Aplica métodos de forma mecánica. La decisión final muestra un intento mínimo de balance, pero es inconsistente.",
-      "E": "La decisión final es arbitraria o se basa en un solo criterio (ej: sólo el precio o sólo la resistencia)."
+      "A": "Ejecuta correctamente QLDMA y QTDMA: define 4–6 criterios medibles (beneficio/costo), asigna SP (0–5) respetando la restricción de no más de dos ‘5’, calcula FS, normaliza NP (0–10) con fórmulas correctas, usa SR=2·SP, calcula S y compara rankings. Realiza análisis de dominancia y contribuciones (SM·SP), y desarrolla reflexiones de robustez/sensibilidad y trade-offs (incluye el paso hacia swing weighting).",
+      "B": "Aplica QLDMA y QTDMA de forma correcta y obtiene rankings defendibles; incluye comparación entre métodos y al menos un análisis simple de dominancia o sensibilidad.",
+      "C": "Aplica los métodos de forma mayormente correcta y llega a un ranking, pero con debilidades: normalización incompleta, pesos poco justificados, o comparación QLDMA–QTDMA superficial.",
+      "D": "Aplicación mecánica/incompleta: errores en fórmulas (NP, FS, S), criterios duplicados o pesos inconsistentes; ranking no es defendible.",
+      "E": "Decisión arbitraria sin método; no implementa matrices o las usa sin coherencia."
     },
     "C132": {
-      "A": "La comunicación es magistral, contando una 'historia' coherente que logra que la dimensión estratégica sea tan tangible y crucial como la técnica para cualquier interlocutor.",
-      "B": "Estructura la exposición para guiar al auditorio desde el problema técnico hasta la implicación estratégica, usando recursos efectivos para destacar esta conexión.",
-      "C": "Comunica de manera clara y ordenada tanto el análisis técnico como las conclusiones estratégicas principales.",
-      "D": "Expone el análisis técnico de forma básica, pero el razonamiento estratégico queda confuso o sepultado.",
-      "E": "La presentación es desorganizada y no logra comunicar el análisis."
+      "A": "Reporte y anexos auditables: desarrollo manual ordenado (modelo, deducciones, supuestos), capturas/mapas CES bien etiquetados, tablas QLDMA/QTDMA completas (unidades, SP/SR, SM/NP), cálculos verificables y narrativa clara. El lector puede replicar el proceso sin asistencia.",
+      "B": "Documentación clara y bien estructurada; la mayor parte de datos, unidades y capturas está trazada con pequeñas omisiones menores.",
+      "C": "Documentación suficiente para seguir el proceso, pero con trazabilidad parcial (faltan unidades, supuestos o el orden lógico de partes I–VIII no se respeta plenamente).",
+      "D": "Exposición desordenada o confusa; faltan tablas completas, unidades o evidencias de CES; dificulta auditar el análisis.",
+      "E": "Documentación deficiente o incompleta; no permite verificar el procedimiento ni la decisión."
     },
     "C133": {
-      "A": "Las conclusiones son profundamente críticas y prospectivas, proyectando el desempeño de su solución en distintos escenarios futuros y definiendo el rol del ingeniero como gestor de recursos y riesgos.",
-      "B": "Ofrece conclusiones reflexivas que explicitan los trade-offs aceptados, los desafíos futuros y las responsabilidades asumidas (ética, ambiental).",
-      "C": "Concluye recomendando un material y sintetiza cuáles fueron los riesgos estratégicos más importantes considerados en la decisión.",
-      "D": "Las conclusiones son genéricas y no van más allá de recomendar un material.",
-      "E": "Las conclusiones son una repetición de datos o están ausentes."
+      "A": "Conclusiones integradoras y críticas: selecciona ≤5 candidatos y justifica por qué sobreviven a capas mecánica y térmica; interpreta qué enseña el caso sobre índices (no recetas universales), discute el cambio si el brazo fuera tubular hueco y reflexiona con coherencia sobre límites de QLDMA/QTDMA (subjetividad, sensibilidad, consistencia) y el salto conceptual hacia elicitación estructurada de pesos.",
+      "B": "Conclusiones sólidas: resumen selección final y trade-offs clave, discuten el papel de índices y el aporte de la capa térmica, e incluyen reflexión razonada sobre al menos dos límites de QLDMA/QTDMA.",
+      "C": "Conclusiones aceptables: recomienda materiales y menciona trade-offs, pero con reflexión limitada sobre índices o sobre los límites del método.",
+      "D": "Conclusiones genéricas; repiten resultados sin análisis, sin discusión del caso tubular ni de los límites/robustez.",
+      "E": "Conclusiones ausentes o incoherentes con el desarrollo y los datos."
     }
   },
   "pesos": {
