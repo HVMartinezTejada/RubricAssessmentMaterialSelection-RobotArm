@@ -211,7 +211,7 @@ if "mostrar_datos_brutos" not in st.session_state:
 
 DURACION_PREDETERMINADA = 60
 TIEMPO_MINIMO = 15
-TIEMPO_MAXIMO = 300
+TIEMPO_MAXIMO = 24*60 #(24 H)
 
 GRUPOS_DISPONIBLES = [f"GRUPO {i}" for i in range(1, 11)]
 
