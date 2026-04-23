@@ -358,7 +358,7 @@ def calcular_promedios_grupo(grupo_calificado):
 # ============================================
 
 def mostrar_panel_estudiante():
-    st.title("📝 Sistema de Evaluación por Pares. Factores de Peso ⚖️ & Brazo robótico 🦾")
+    st.title("📝 Sistema de Heteroevaluación. Factores de Peso ⚖️ Caso Brazo robótico 🦾")
 
     sync_estado_global_a_session_state()
 
